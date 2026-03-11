@@ -9,11 +9,10 @@ pipeline {
     stages {
 
         stage('Checkout Code') {
-            steps {
-                git 'https://github.com/hnj1994/devops-lab-app.git'
-            }
-        }
-
+    steps {
+        git branch: 'main', url: 'https://github.com/hnj1994/devops-lab-app.git'
+    }
+}
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t devops-lab-app:${BUILD_NUMBER} .'
