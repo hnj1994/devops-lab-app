@@ -1,0 +1,9 @@
+{
+  "name": "devops-lab-app",
+  "version": "1.0.0",
+  "description": "Simple DevOps lab application",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
