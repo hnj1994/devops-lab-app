@@ -4,7 +4,7 @@ services:
 
   app:
     build: .
-    container_name: devops_app
+    container_name: devops_app1
     ports:
       - "3000:3000"
     depends_on:
@@ -12,7 +12,7 @@ services:
 
   mysql:
     image: mysql:5.7
-    container_name: devops_mysql
+    container_name: devops_mysql1
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: devopsdb
@@ -21,7 +21,7 @@ services:
 
   nginx:
     image: nginx
-    container_name: devops_nginx
+    container_name: devops_nginx1
     ports:
       - "80:80"
     depends_on:
