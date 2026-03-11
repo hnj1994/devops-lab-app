@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy Application') {
             steps {
                 sh '''
-                docker save devops-lab-app:${BUILD_NUMBER} | ssh admin@10.22.18.227 docker load
+                docker save devops-lab-app:${BUILD_NUMBER} | ssh admin@10.85.161.139 docker load
 
                 ssh admin@10.85.161.139 "
                 docker stop devops-container || true &&
