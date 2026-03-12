@@ -19,9 +19,9 @@ pipeline {
         stage('Deploy Application') {
             steps {
                 sh '''
-                docker save devops-lab-app:${BUILD_NUMBER} | ssh admin@10.85.161.139 docker load
+                docker save devops-lab-app:${BUILD_NUMBER} | ssh admin@10.22.18.228 docker load
 
-                ssh admin@10.85.161.139 "
+                ssh admin@10.22.18.228 "
                 docker stop devops-container || true &&
                 docker rm devops-container || true &&
                 docker run -d -p 4000:3000 --name devops-container devops-lab-app:${BUILD_NUMBER}
