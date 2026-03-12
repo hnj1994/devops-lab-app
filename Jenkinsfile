@@ -24,7 +24,7 @@ pipeline {
                 ssh admin@10.22.18.228 "
                 docker stop devops-container || true &&
                 docker rm devops-container || true &&
-                docker run -d -p 4000:3000 --name devops-container devops-lab-app:${BUILD_NUMBER}
+                docker run -d -p 8000:9000 --name hnjtest01-container devops-lab-app:${BUILD_NUMBER}
                 "
                 '''
             }
